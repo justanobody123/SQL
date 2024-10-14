@@ -28,14 +28,6 @@ CREATE TABLE RequiredDisciplines
 	CONSTRAINT FK_RequiredDisciplines_Disciplines_Target FOREIGN KEY (target_discipline) REFERENCES Disciplines(discipline_id),
 	CONSTRAINT FK_RequiredDisciplines_Disciplines_Required FOREIGN KEY (required_discipline) REFERENCES Disciplines(discipline_id)
 );
-CREATE TABLE CompletedDisciplines
-(
-	[group]			INT,
-	discipline		SMALLINT,
-	PRIMARY KEY ([group], discipline),
-	CONSTRAINT FK_CompletedDisciplines_Groups FOREIGN KEY ([group]) REFERENCES Groups(group_id),
-	CONSTRAINT FK_CompletedDisciplines_Disciplines FOREIGN KEY (discipline) REFERENCES Disciplines(discipline_id)
-);
 CREATE TABLE DirectionsDisciplines
 (
 	direction		SMALLINT,
@@ -44,4 +36,19 @@ CREATE TABLE DirectionsDisciplines
 	CONSTRAINT FK_DirectionsDisciplines_Directions FOREIGN KEY (direction) REFERENCES Directions(direction_id),
 	CONSTRAINT FK_DirectionsDisciplines_Disciplines FOREIGN KEY (discipline) REFERENCES Disciplines(discipline_id)
 );
-
+CREATE TABLE DisciplinesTeachers
+(
+	discipline		SMALLINT,
+	teacher			INT,
+	PRIMARY KEY (discipline, teacher),
+	CONSTRAINT FK_DisciplinesTeachers_Disciplines FOREIGN KEY (discipline) REFERENCES Disciplines(discipline_id),
+	CONSTRAINT FK_DisciplinesTeachers_Teachers FOREIGN KEY (teacher) REFERENCES Teachers(teacher_id)
+);
+CREATE TABLE CompletedDisciplines
+(
+	[group]			INT,
+	discipline		SMALLINT,
+	PRIMARY KEY ([group], discipline),
+	CONSTRAINT FK_CompletedDisciplines_Groups FOREIGN KEY ([group]) REFERENCES Groups(group_id),
+	CONSTRAINT FK_CompletedDisciplines_Disciplines FOREIGN KEY (discipline) REFERENCES Disciplines(discipline_id)
+);

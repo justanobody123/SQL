@@ -1,5 +1,5 @@
 USE PD_311_DDL; --ÂÛÁÈÐÀÅÌ ÁÀÇÓ ÄÀÍÍÛÕ
-CREATE TABLE Directions
+/*CREATE TABLE Directions
 (
 	direction_id	SMALLINT		PRIMARY KEY,
 	direction_name	NVARCHAR(150)	NOT NULL
@@ -20,8 +20,8 @@ CREATE TABLE Students
 	brith_date		DATE			NOT NULL,
 	[group]			INT
 	CONSTRAINT FK_Students_Groups FOREIGN KEY REFERENCES Groups(group_id)
-);
-CREATE TABLE ReportTypes
+);*/
+/*CREATE TABLE ReportTypes
 (
 	report_type_id		TINYINT			PRIMARY KEY,
 	report_type_name	NVARCHAR(150)	NOT NULL
@@ -120,4 +120,4 @@ CREATE TABLE Exams
 	CONSTRAINT FK_Exams_Schedule FOREIGN KEY (lesson) REFERENCES Schedule(lesson_id),
 	grade		TINYINT
 	CONSTRAINT CK_grade CHECK (grade >= 0 AND grade <= 12)
-);
+);*/

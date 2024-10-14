@@ -1,5 +1,5 @@
 USE PD_311_DDL; --ÂÛÁÈÐÀÅÌ ÁÀÇÓ ÄÀÍÍÛÕ
-/*CREATE TABLE Directions
+CREATE TABLE Directions
 (
 	direction_id	SMALLINT		PRIMARY KEY,
 	direction_name	NVARCHAR(150)	NOT NULL
@@ -13,7 +13,7 @@ CREATE TABLE Groups
 );
 CREATE TABLE Students
 (
-	student_id		BIGINT			PRIMARY KEY,
+	student_id		INT				PRIMARY KEY		IDENTITY(1, 1),
 	last_name		NVARCHAR(150)	NOT NULL,
 	first_name		NVARCHAR(150)	NOT NULL,
 	middle_name		NVARCHAR(150),	
@@ -68,7 +68,7 @@ CREATE TABLE DependentDisciplines
 );
 CREATE TABLE Teachers
 (
-	teacher_id		INT				PRIMARY KEY,		
+	teacher_id		INT				PRIMARY KEY		IDENTITY(1, 1),		
 	last_name		NVARCHAR(150)	NOT NULL,
 	first_name		NVARCHAR(150)	NOT NULL,
 	middle_name		NVARCHAR(150),
@@ -101,7 +101,7 @@ CREATE TABLE Schedule
 --ÄÀËÜØÅ ÏÎÅÄÓÒ ÒÀÁËÈÖÛ Ñ ÎÖÅÍÊÀÌÈ, ÍÀÄÎ ÏÎÑÌÎÒÐÅÒÜ Â ÈÍÒÅÐÍÅÒÅ, ÊÀÊ ÂÛÑÒÀÂÈÒÜ ÎÃÐÀÍÈ×ÅÍÈÅ ÍÀ ÄÈÀÏÀÇÎÍ ÇÍÀ×ÅÍÈÉ
 CREATE TABLE Grades
 (
-	student		BIGINT,
+	student		INT,
 	lesson		BIGINT,
 	PRIMARY KEY (student, lesson),
 	CONSTRAINT FK_Grades_Students FOREIGN KEY (student) REFERENCES Students(student_id),
@@ -113,11 +113,11 @@ CREATE TABLE Grades
 );
 CREATE TABLE Exams
 (
-	student		BIGINT,
+	student		INT,
 	lesson		BIGINT,
 	PRIMARY KEY (student, lesson),
 	CONSTRAINT FK_Exams_Students FOREIGN KEY (student) REFERENCES Students(student_id),
 	CONSTRAINT FK_Exams_Schedule FOREIGN KEY (lesson) REFERENCES Schedule(lesson_id),
 	grade		TINYINT
 	CONSTRAINT CK_grade CHECK (grade >= 0 AND grade <= 12)
-);*/
+);

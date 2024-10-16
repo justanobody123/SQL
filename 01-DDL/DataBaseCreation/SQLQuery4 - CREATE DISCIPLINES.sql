@@ -1,5 +1,5 @@
 USE PD_311_DDL;
-CREATE TABLE ReportTypes
+/*CREATE TABLE ReportTypes
 (
 	report_type_id		TINYINT			PRIMARY KEY,
 	report_type_name	NVARCHAR(50)	NOT NULL
@@ -51,4 +51,41 @@ CREATE TABLE CompletedDisciplines
 	PRIMARY KEY ([group], discipline),
 	CONSTRAINT FK_CompletedDisciplines_Groups FOREIGN KEY ([group]) REFERENCES Groups(group_id),
 	CONSTRAINT FK_CompletedDisciplines_Disciplines FOREIGN KEY (discipline) REFERENCES Disciplines(discipline_id)
+);
+CREATE TABLE Schedule
+(
+	lesson_id		BIGINT			PRIMARY KEY		IDENTITY(1, 1),
+	[date]			DATE			NOT NULL,
+	[time]			TIME(0)			NOT NULL,
+	[group]			INT				NOT NULL
+	CONSTRAINT FK_Schedule_Groups	FOREIGN KEY REFERENCES Groups(group_id),
+	discipline		SMALLINT		NOT NULL
+	CONSTRAINT FK_Schedule_Disciplines	FOREIGN KEY REFERENCES Disciplines(discipline_id),
+	teacher			INT				NOT NULL
+	CONSTRAINT FK_Schedule_Teachers	FOREIGN KEY REFERENCES Teachers(teacher_id),
+	[subject]		NVARCHAR(256),
+	spent			BIT				NOT NULL,
+);*/
+--ß ÍÅ ÇÍÀÞ, ÊÀÊ ÏÐÈÌÅÍÈÒÜ ËÎÃÈÊÓ ÀÂÒÎÈÍÊÐÅÌÅÍÒÀ Ê ÒÀÁËÈÖÅ Ñ ÄÂÓÌß ÃËÀÂÍÛÌÈ ÊËÞ×ÀÌÈ. 
+CREATE TABLE Grades
+(
+	student		INT,
+	lesson		BIGINT,
+	PRIMARY KEY (student, lesson),
+	CONSTRAINT FK_Grades_Students FOREIGN KEY (student) REFERENCES Students(student_id),
+	CONSTRAINT FK_Grades_Schedule FOREIGN KEY (lesson) REFERENCES Schedule(lesson_id),
+	grade_1		TINYINT
+	CONSTRAINT CK_grade_1 CHECK (grade_1 > 0 AND grade_1 <= 12),
+	grade_2		TINYINT
+	CONSTRAINT CK_grade_2 CHECK (grade_2 > 0 AND grade_2 <= 12),
+);
+CREATE TABLE Exams
+(
+	student		INT,
+	lesson		BIGINT,
+	PRIMARY KEY (student, lesson),
+	CONSTRAINT FK_Exams_Students FOREIGN KEY (student) REFERENCES Students(student_id),
+	CONSTRAINT FK_Exams_Schedule FOREIGN KEY (lesson) REFERENCES Schedule(lesson_id),
+	grade		TINYINT
+	CONSTRAINT CK_grade CHECK (grade >= 0 AND grade <= 12)
 );

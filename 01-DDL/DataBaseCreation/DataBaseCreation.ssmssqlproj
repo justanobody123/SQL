@@ -28,11 +28,29 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery0 - DROP DATABASE.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLQuery1 - CREATE DATA BASE.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HNMGDH2\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HNMGDH2\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1 - CREATE DATA BASE.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery2 - CREATE TABLES.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HNMGDH2\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-HNMGDH2\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery2 - CREATE TABLES.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery3 - CREATE TEACHERS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HNMGDH2\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HNMGDH2\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery3 - CREATE TEACHERS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery4 - CREATE DISCIPLINES.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HNMGDH2\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HNMGDH2\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery4 - CREATE DISCIPLINES.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

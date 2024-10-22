@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Select_Data">
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Homework">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="DESKTOP-HNMGDH2\SQLEXPRESS:DESKTOP-HNMGDH2\justanobody">
-          <Created>2024-10-21T13:48:45.2330434+03:00</Created>
+          <Created>2024-10-21T20:42:57.1939034+03:00</Created>
           <Type>SQL</Type>
           <Server>DESKTOP-HNMGDH2\SQLEXPRESS</Server>
           <UserName />
           <Authentication>Windows Authentication</Authentication>
-          <InitialDB />
+          <InitialDB>PD_311_DDL</InitialDB>
           <LoginTimeout>30</LoginTimeout>
           <TrustServerCertificate>True</TrustServerCertificate>
           <HostNameInServerCertificate />
@@ -22,29 +22,29 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="SQLQuery1 - SELECT DATA.sql">
+        <FileNode Name="SQLQuery1.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HNMGDH2\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-HNMGDH2\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1 - SELECT DATA.sql</FullPath>
+          <FullPath>SQLQuery1.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery2 - MULTISELECT.sql">
+        <FileNode Name="SQLQuery2.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HNMGDH2\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-HNMGDH2\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery2 - MULTISELECT.sql</FullPath>
+          <FullPath>SQLQuery2.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery3 - SELECT REQUIRED DISCIPLINES.sql">
+        <FileNode Name="SQLQuery3.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HNMGDH2\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-HNMGDH2\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery3 - SELECT REQUIRED DISCIPLINES.sql</FullPath>
+          <FullPath>SQLQuery3.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery4 - AGGREGATION.sql">
+        <FileNode Name="SQLQuery4.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HNMGDH2\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-HNMGDH2\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery4 - AGGREGATION.sql</FullPath>
+          <FullPath>SQLQuery4.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

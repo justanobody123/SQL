@@ -3,11 +3,11 @@
 USE PD_311_DDL;
 GO
 
-DECLARE @start_date			AS DATE =		'2024-10-02'
-DECLARE @date				AS DATE =		@start_date
-DECLARE @first_class_time 	AS TIME =		'13:30'
-DECLARE @second_class_time 	AS TIME =		'15:00'
-DECLARE @group				AS INT =		(SELECT group_id FROM Groups WHERE group_name = 'PD_321');
+DECLARE @start_date			AS DATE =		'2023-11-27';
+DECLARE @date				AS DATE =		@start_date;
+DECLARE @first_class_time 	AS TIME =		'14:30';
+DECLARE @second_class_time 	AS TIME =		DATEADD(MINUTE, 90, @first_class_time);
+DECLARE @group				AS INT =		(SELECT group_id FROM Groups WHERE group_name = 'PD_212');
 DECLARE @discipline			AS SMALLINT =	(SELECT discipline_id FROM Disciplines WHERE discipline_name LIKE '%MS_SQL Server%');
 DECLARE @lesson AS SMALLINT = 0;
 DECLARE @number_of_lessons	AS SMALLINT =	(SELECT number_of_lessons FROM Disciplines WHERE discipline_name LIKE '%MS_SQL Server');
